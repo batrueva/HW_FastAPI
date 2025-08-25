@@ -1,0 +1,19 @@
+[project]
+name = "hw-fastapi"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "learning_python-2025",email = "mkkatyusha@ya.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.116.1,<0.117.0)",
+    "uvicorn[all] (>=0.35.0,<0.36.0)",
+    "jinja2 (>=3.1.6,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
