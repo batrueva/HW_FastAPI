@@ -10,7 +10,7 @@ templates = Jinja2Templates(directory="templates")
 def index(request: Request):
     """"""
     title = 'Главная страница'
-    text = "Книжная полка"
+    text = "Онлайн библиотека"
     context = {"request": request,
                "title": title,
                "text": text}
@@ -29,8 +29,8 @@ def index(request: Request):
 @router.get("/about/", response_class=HTMLResponse)
 def about(request: Request):
     """"""
-    title = 'About'
-    text = "Подробная статья о нас"
+    title = 'О нас'
+    text = "Читайте с удовольствием!"
     context = {"request": request,
                "title": title,
                "text": text}

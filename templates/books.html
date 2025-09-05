@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <p>{{text}}</p>
+    {% for book in books %}
+        <div class="card" style="width: 18rem;">
+        <img src="/images/{{book.img}}" class="card-img-top" alt="{{book.title}}">
+        <div class="card-body">
+            <b><h5 class="card-title">{{book.title}}</h5></b>
+            <p class="card-text">{{book.description}}</p>
+            <p class="card-text">{{book.year}}</p>
+            <h5 class="card-text">&copy;{{book.autor}}</h5>
+            <a href="#" class="btn btn-primary">Читать</a>
+        </div>
+        </div>
+
+    {% endfor %}    
+{% endblock %}
