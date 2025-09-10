@@ -1,2 +1,8 @@
 /__init__.py
 /__pycache__
+/.pytest_cache
+/.vscode
+/models/__pycache__
+/my_venv
+/routers/__pycache__
+/tests/__pycache__
