@@ -1,14 +1,15 @@
 from fastapi import FastAPI
-
 import uvicorn
+from fastapi.staticfiles import StaticFiles
 
-from routers.book_router import router as book_router
-from routers.index_routers import router as index_routers
+from routers import app_router
 
 app = FastAPI()
+app.mount("/images", StaticFiles(directory="images", packages=None, html=False, check_dir=True), name="images" )
 
-app.include_router(index_routers)
-app.include_router(book_router)
+
+app.include_router(app_router)
+
 
 
 if __name__ == '__main__':

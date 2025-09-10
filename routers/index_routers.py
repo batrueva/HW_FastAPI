@@ -7,8 +7,8 @@ templates = Jinja2Templates(directory="templates")
 
 
 @router.get("/", response_class=HTMLResponse)
-def index(request: Request):
-    """"""
+async def index(request: Request):
+    """Главная страница"""
     title = 'Главная страница'
     text = "Онлайн библиотека"
     context = {"request": request,
@@ -16,19 +16,9 @@ def index(request: Request):
                "text": text}
     return templates.TemplateResponse("index.html", context=context)
 
-@router.get("/books", response_class=HTMLResponse)
-def index(request: Request):
-    """"""
-    title = 'Книжная полка'
-    text = "Книжная полка"
-    context = {"request": request,
-               "title": title,
-               "text": text}
-    return templates.TemplateResponse("index.html", context=context)
-
 @router.get("/about/", response_class=HTMLResponse)
-def about(request: Request):
-    """"""
+async def about(request: Request):
+    """О нас"""
     title = 'О нас'
     text = "Читайте с удовольствием!"
     context = {"request": request,
